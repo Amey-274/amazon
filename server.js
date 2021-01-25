@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const data = require('./data')
 const orderRouter = require('./routers/orderRouter')
-const port = process.env.PORT|| 5000
+const port = process.env.PORT|| 5001
 const ProductRouter = require('./routers/productRouter')
 const userRouter  = require('./routers/userRouter')
 require('./models/db')
