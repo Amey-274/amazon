@@ -1,0 +1,501 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --bg-color: #203040;
+  --font-color: #ff8000;
+}
+body {
+  height: 100vh;
+  font-family: Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* LoadingBox */
+.loading {
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin: 3rem;
+}
+button {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+.stock {
+  color: #20a020;
+}
+.not-stock {
+  color: #a02020;
+}
+/* errors */
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+  margin-top: 2rem;
+}
+.alert a {
+  text-decoration: none;
+}
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0e0;
+  margin-top: 2.2rem;
+  border-radius: 1rem;
+}
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+
+input,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+button.primary {
+  background-color: #f0c040;
+}
+.header {
+  background-color: var(--bg-color);
+}
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+.show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.show .logo a {
+  font-size: 3rem;
+  padding: 1rem;
+
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 1.1rem;
+  font-size: 1.6rem;
+}
+.menu li a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+.menu li a:hover {
+  color: var(--font-color);
+}
+
+/* products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-height: 130rem;
+}
+
+.product img {
+  max-width: 30rem;
+}
+.product {
+  margin-top: 3rem;
+  flex-shrink: 1;
+  max-width: 35rem;
+  padding: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  border-radius: 0.5rem;
+}
+.product a {
+  text-decoration: none;
+  display: block;
+  font-weight: 700;
+  font-size: 1.7rem;
+  padding: 1rem;
+}
+.product a:hover {
+  color: var(--font-color);
+}
+.product span:last-child {
+  padding: 1rem;
+}
+.rating {
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+.rating .c {
+  color: #f0c040;
+}
+.product span {
+  font-size: 2rem;
+}
+.foot {
+  position: fixed;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  line-height: 3rem;
+  background-color: var(--bg-color);
+}
+
+/* Product details screen */
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 1rem;
+  height: 90vh;
+}
+.product-details .img-large img {
+  /* max-width: 90rem; */
+  height: 90%;
+}
+
+.product-details .productdetails {
+  align-self: start;
+  margin: 1rem;
+  padding: 1rem;
+}
+.product-details .productdetails h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.product-details .productdetails p {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.product-details .product-data {
+  border: 0.1rem #a4a4a4 solid;
+  padding: 1rem;
+
+  width: 350px;
+  flex-direction: column;
+  display: flex;
+  align-self: start;
+  height: 200px;
+  justify-content: space-around;
+}
+
+.product-details .product-data button {
+  display: block;
+  align-self: stretch;
+}
+.product-details .product-data select {
+  display: inline;
+}
+
+.fix {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.fw {
+  width: 400px;
+}
+
+/* cart Screen */
+.cart-product {
+  display: flex;
+  margin-top: 2rem;
+  padding: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* font-size: ; */
+  width: 90rem;
+}
+.cart-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 2;
+  width: 70rem;
+  margin-bottom: 2rem;
+}
+.cart-product .cart-data .cart-img img {
+  width: 10rem;
+}
+.cart {
+  padding: 0.4rem;
+  flex-shrink: 1;
+  flex-grow: 2;
+}
+.fix1 {
+  display: flex;
+  justify-content: space-around;
+}
+.cart-total {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  border-radius: 2px;
+  padding: 3rem;
+  border: 0.1rem solid #a4a4a4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-self: flex-start;
+}
+.cart-name a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.cart-price {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+/* Form  */
+.form {
+  display: flex;
+  justify-content: center;
+  height: 60rem;
+  flex-shrink: 3;
+}
+form {
+  margin-top: 4rem;
+  align-self: flex-start;
+  width: 60rem;
+  padding: 1rem;
+}
+.form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.form input {
+  padding: 1.1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 0.1rem solid #a4a4a4;
+}
+.form h1 {
+  margin-bottom: 4rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.form .form-btn button {
+  width: 100%;
+}
+.form a,
+form span {
+  text-decoration: none;
+  font-size: 500;
+  font-size: 1.6rem;
+}
+
+.new {
+  margin-top: 2rem;
+}
+
+.checkout-steps {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #c0c0c0;
+  flex: 1;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+.checkout-steps > div.active {
+  border-top: 0.3rem solid #f08000;
+
+  color: #f08000;
+  width: 30rem;
+}
+
+.checkout-steps span {
+  display: inline-block;
+}
+.checkout-steps .off {
+  width: 30rem;
+  color: #c0c0c0;
+  border-top: 0.3rem solid #c0c0c0;
+}
+.paypal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 13rem;
+  margin-bottom: 2rem;
+}
+.paypal label {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
+.paypal input {
+  display: inline-block;
+  padding: 10px;
+}
+/* PlaceOrder Sccreen */
+.placeOrder {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 3rem;
+
+}
+li {
+  list-style: none;
+}
+/* .placeOrder  */
+.placeOrder li {
+  border-radius: 1rem;
+}
+.placeOrder img {
+  width: 7rem;
+  padding: 0.2rem;
+}
+.orders .shipping-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90rem;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.cart-item a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.cart-item span {
+  /* border: 2px solid red; */
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.2rem;
+}
+.shipping-data .shipping h2 {
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+.shipping-data .shipping {
+  border: 0.1rem solid #a4a4a4;
+
+  padding: 1rem;
+}
+.shipping-data .shipping p,
+.shipping-data .payment p {
+  font-size: 1.6rem;
+  padding: 0.2rem;
+  font-weight: 500;
+}
+
+.shipping p span,
+.shipping-data .payment p span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.payment {
+  display: flex;
+  margin: 3rem 0;
+  border: 0.1rem solid #a4a4a4;
+
+  height: 15rem;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
+.payment {
+  font-size: 1.2rem;
+}
+
+.order-item {
+  border: 0.1rem solid #a4a4a4;
+  padding: 2rem;
+}
+.total{
+  border: 0.1rem solid #a4a4a4;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 50rem;
+  align-self: start;
+  
+
+}
+.total .total1{
+  font-size: 0.9rem;
+}
+.total2{
+  display: flex;
+  justify-content: space-between;
+}
+.total2 p{
+  font-size: 1.7rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+}
+
+.total3{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.c{
+  width: 100%;
+  margin: 2rem 0 ;
+}
+div .head{
+  padding: 2rem;
+  margin: 2rem;
+  display: inline-block;
+  font-size: 2rem;
+}
+
