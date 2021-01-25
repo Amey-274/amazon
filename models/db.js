@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/Myamazon',{
+mongoose.connect(process.env.MONGOURI,{
     useFindAndModify:false,
     useNewUrlParser:true,
     useUnifiedTopology:true,
