@@ -15,14 +15,13 @@ app.use(express.urlencoded())
 
 app.use(express.static(path.join(__dirname, './client/build')));
 
-app.get("/",(req,res)=>{
+app.get("/*",(req,res)=>{
     res.sendFile(path.resolve(__dirname,'client','build','index.html'))
 })
 
 app.use('/api/products',ProductRouter)
 app.use('/api/user',userRouter)
 app.use('/api/orders',orderRouter)
-
 
 
 app.use((err,req,res,next)=>{
